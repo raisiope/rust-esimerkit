@@ -1,0 +1,42 @@
+# Rust-käännöstuotteet
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Rust-väliaikaistiedostot
+*.pdb
+*.rlib
+
+# Cargo-projektien target-kansio
+/target/
+Cargo.lock
+
+# IDE/editor-konfiguraatiot
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Käyttöjärjestelmä-spesifit tiedostot
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# Backup-tiedostot
+*.bak
+*.orig
+*.tmp
+
+# Log-tiedostot
+*.log
