@@ -1,0 +1,66 @@
+Yksinkertaiset ohjeet, että pääset alkuun RUST ohjelmointiin
+
+Asenna Rust
+* https://www.rust-lang.org/tools/install -sivulta löydät asennusohjelman
+* Käynnistä rustup-init.exe ja valitse kohta 1. (defaut - just press enter)
+
+Asenna Git 
+* https://git-scm.com/downloads/win -sivulta löydät win koneen ohjeet
+* Linuxille:
+    Debian/Ubuntu: sudo apt-get update && sudo apt-get install git
+    CentOS/Fedora: sudo yum install git
+    Arch Linux: sudo pacman -S git
+    Homebrew (macOS): brew install git
+    MacPorts (macOS): sudo port install git 
+
+Asenna ja suorita opetusohjelmat
+* Tee hakemisto, jonka alle talletat GitHub-repositorion (GitHup-repo)
+* Anna komento: git clone https://github.com/raisiope/rust-esimerkit.git
+* Siirry hakemistoon rust-esimerkit "cd rust-esimerkit"
+  - Rust tiedostot saat käänettyä exe-ohjelmaksi rustc ohjelmalla esim:
+        rustc enum_esimerkki.rs
+  - Tilakone_esimerkki.rs tiedosto sisältää muutamia tekoälyltä jääneitä virheitä
+        etsi virheet ja korjaa! 
+
+* Cargo on Rust-paketinhallintaohjelma. Cargo lataa Rust-pakettisi riippuvuudet... jne.
+  - Anna komento "cargo build", joka kääntää rust-traits-esimerkki ohjelman
+  - Huom! saat varoituksen, koska Rust on tarkka koodista...
+               warning: fields `nimi` and `maito_litraa` are never read
+              --> src\main.rs:27:5
+               |
+            26 | struct Lehma {
+               |        ----- fields in this struct
+            27 |     nimi: String,
+               |     ^^^^
+            28 |     maito_litraa: f32,
+               |     ^^^^^^^^^^^^
+               |
+               = note: `#[warn(dead_code)]` on by default
+
+  - Varoituksen saa pois lisäämällä nukkaa (lint) tiedoston alkuun esim. "#![allow(dead_code)]"
+  - Parempi tapa on lisätä muuttujan alkuun alaviiva "_", jos on ok ettei muuttujaa käytetä
+      lisää alaviiva muuttujien eteen riveille 27-28:
+              struct Lehma {
+                  _nimi: String,
+                  _maito_litraa: f32,
+              }
+      ja samoin riveille 94-95:
+              let lehma = Lehma {
+                  _nimi: "Mansikki".to_string(),
+                  _maito_litraa: 25.5,
+              };
+      niin esimerkkiohjelma kääntyy ilman varoituksia.
+  - Käännetty exe-tiedosto löytyy hakemistosta ./target/debug
+  - Komennolla "cargo run" saat ohjelman käännettyä ja suoritettua
+
+Mitä seuraavaksi?
+* Suosittelen Visual Studio Coden asentamista (https://code.visualstudio.com/download)
+    - sekä rust-analylyzer laajennuksen asentamista code-ympäristöön.
+* Tekoäly tekee Rust opiskelun hyvin helpoksi, suosittelen Warp 2.0 ohjelmistoa
+    (Nämä Rust-ohjelmoinnin ohjeet on tehty Warp 2.0 ohjelmaan tutustuttaessa)
+
+Asenna Warp 2.0
+* Lataa asennusohjelma sivulta https://www.warp.dev/
+* Asenna ladattu ohjelma, ja etsi netistä lisäohjeita Warpin käyttämiseen
+* Käytössä on maksutta 150 AI-kysymystä kuukaudessa, joka riittää hyvin Rustiin tutustumiseen
+
