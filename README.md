@@ -31,6 +31,14 @@ Tämä repositorio sisältää erilaisia Rust-ohjelmointikielen esimerkkejä suo
   - Tapahtumapohjainen tilanhallinta
   - Virheenkäsittely tilakoneiden kanssa
 
+### Traits (Piirteet)
+- **`src/main.rs`** - Rust traits esimerkki (Cargo-projekti)
+  - Trait määrittely ja implementaatio
+  - Polymorfismi ja trait objectit
+  - Default implementaatiot
+  - Generic funktiot trait boundeilla
+  - Eläinkoro-esimerkki (koira, kissa, lehmä)
+
 ## 🚀 Käyttö
 
 ### Vaatimukset
@@ -56,6 +64,9 @@ rustc esimerkin_nimi.rs
 # Käännä ja suorita enum-esimerkki
 rustc enum_esimerkki.rs
 .\enum_esimerkki.exe
+
+# Cargo-projekti (traits-esimerkki)
+cargo run
 ```
 
 ## 📚 Opitut käsitteet
@@ -76,6 +87,7 @@ rustc enum_esimerkki.rs
 - ✅ Ownership ja borrowing
 - ✅ Tilakoneet (State machines)
 - ✅ Generic types
+- ✅ Traits ja trait objectit
 - ✅ Debug ja Display traits
 
 ## 🎯 Seuraavat askelet
