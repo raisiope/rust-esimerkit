@@ -39,12 +39,12 @@ Asenna ja suorita opetusohjelmat
 
   - Varoituksen saa pois lisäämällä nukkaa (lint) tiedoston alkuun esim. "#![allow(dead_code)]"
   - Parempi tapa on lisätä muuttujan alkuun alaviiva "_", jos on ok ettei muuttujaa käytetä
-      lisää alaviiva muuttujien eteen riveille 27-28:
+      lisää alaviiva muuttujien eteen riveille 26-27:
               struct Lehma {
                   _nimi: String,
                   _maito_litraa: f32,
               }
-      ja samoin riveille 94-95:
+      ja samoin riveille 93-94:
               let lehma = Lehma {
                   _nimi: "Mansikki".to_string(),
                   _maito_litraa: 25.5,
@@ -63,4 +63,5 @@ Asenna Warp 2.0
 * Lataa asennusohjelma sivulta https://www.warp.dev/
 * Asenna ladattu ohjelma, ja etsi netistä lisäohjeita Warpin käyttämiseen
 * Käytössä on maksutta 150 AI-kysymystä kuukaudessa, joka riittää hyvin Rustiin tutustumiseen
+
 
